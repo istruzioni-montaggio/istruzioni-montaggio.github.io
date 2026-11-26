@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tavolo Levante – Video di montaggio</title>
+<meta name="description" content="Video di montaggio del Tavolo Levante: tutti i passi, dalla struttura in alluminio al fissaggio del piano a doghe.">
+<meta name="theme-color" content="#dbd3cb">
+<meta property="og:type" content="video.other">
+<meta property="og:title" content="Tavolo Levante – Video di montaggio">
+<meta property="og:description" content="Tutti i passi del montaggio, in 1 minuto e mezzo.">
+<meta property="og:image" content="https://totti00.github.io/video-montaggio/video/tavolo-levante-poster.jpg">
+<meta property="og:url" content="https://totti00.github.io/video-montaggio/levante/">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="eyebrow"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>Video di montaggio</div>
+    <h1>Tavolo Levante</h1>
+    <span class="rule" aria-hidden="true"></span>
+    <p class="also">Stesso procedimento per <b>Tavolo Libeccio</b>, <b>Tavolo Maestrale</b>, <b>Panca Gradisca</b> e <b>Panca Volpina</b>.</p>
+  </div>
+</header>
+
+<main>
+  <div class="main-in">
+    <div class="player">
+      <video id="video" controls playsinline preload="metadata" poster="../video/tavolo-levante-poster.jpg">
+        <source src="../video/tavolo-levante-720p.mp4" type="video/mp4">
+        Il tuo browser non riesce a riprodurre il video: <a href="../video/tavolo-levante-720p.mp4">scaricalo qui</a>.
+      </video>
+      <div class="player-bar">
+        <span class="hint">Tocca un passo qui sotto per andare direttamente a quel punto.</span>
+        <a class="btn" href="../video/tavolo-levante-1080p.mp4" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+          Scarica in alta qualità (1080p)
+        </a>
+      </div>
+    </div>
+
+    <h2>Passi del montaggio</h2>
+    <ol class="steps" id="steps">
+      <li><button data-t="4.5"><span class="n ico">▦</span><span class="t">Componenti e ferramenta<span class="s">Verificare il contenuto della confezione</span></span><span class="time">0:04</span></button></li>
+      <li><button data-t="13"><span class="n">1</span><span class="t">Posizionare i due fianchi (F1) in maniera speculare</span><span class="time">0:13</span></button></li>
+      <li><button data-t="18.5"><span class="n">2</span><span class="t">Inserire i traversi T1 e T2 nelle asole dei fianchi<span class="s">Angolari dei traversi superiori rivolti verso l’interno</span></span><span class="time">0:18</span></button></li>
+      <li><button data-t="30.5"><span class="n">3</span><span class="t">Avvitare le viti M8 con rondella in nylon<span class="s">Senza serrarle</span></span><span class="time">0:30</span></button></li>
+      <li><button data-t="40.5"><span class="n">4</span><span class="t">Fissare il traverso inferiore (T2)<span class="s">Spingerlo fino in fondo e usare il foro più interno</span></span><span class="time">0:40</span></button></li>
+      <li><button data-t="49.5"><span class="n">5</span><span class="t">Serrare tutte le 10 viti</span><span class="time">0:49</span></button></li>
+      <li><button data-t="57"><span class="n">6</span><span class="t">Posizionare la struttura capovolta sul piano a doghe (P1)</span><span class="time">0:57</span></button></li>
+      <li><button data-t="67"><span class="n">7</span><span class="t">Fissare il piano con le 6 viti da legno<span class="s">Nelle asole degli angolari dei traversi T1</span></span><span class="time">1:07</span></button></li>
+      <li><button data-t="77"><span class="n">8</span><span class="t">Capovolgere il tavolo</span><span class="time">1:17</span></button></li>
+      <li><button data-t="81"><span class="n ico">✓</span><span class="t">Montaggio completato</span><span class="time">1:21</span></button></li>
+    </ol>
+
+    <p class="note">Le istruzioni complete, con l’elenco della ferramenta e dei componenti, sono nel libretto di montaggio che trovi nella confezione.</p>
+  </div>
+</main>
+
+<footer><div class="foot-in">Video di montaggio · Tavolo Levante</div></footer>
+
+<script>
+  const video = document.getElementById('video');
+  const buttons = [...document.querySelectorAll('#steps button')];
+  const starts = buttons.map(b => parseFloat(b.dataset.t));
+  buttons.forEach((b, i) => b.addEventListener('click', () => {
+    video.currentTime = starts[i] + 0.4;
+    video.play().catch(() => {});
+    video.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }));
+  video.addEventListener('timeupdate', () => {
+    const t = video.currentTime;
+    let cur = -1;
+    starts.forEach((s, i) => { if (t >= s) cur = i; });
+    buttons.forEach((b, i) => b.classList.toggle('on', i === cur));
+  });
+</script>
+</body>
+</html>
