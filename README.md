@@ -1,10 +1,10 @@
 # Video di montaggio
 
-Pagine pubblicate con GitHub Pages: **https://totti00.github.io/video-montaggio/**
+Pagine pubblicate con GitHub Pages: **https://istruzioni-montaggio.github.io/**
 
 | Prodotto | Pagina (indirizzo del QR code nel libretto) |
 |---|---|
-| Tavolo Levante (anche Libeccio, Maestrale, Panca Gradisca, Panca Volpina) | https://totti00.github.io/video-montaggio/levante/ |
+| Tavolo Levante (anche Libeccio, Maestrale, Panca Gradisca, Panca Volpina) | https://istruzioni-montaggio.github.io/levante/ |
 
 ## Struttura
 - `index.html` – elenco dei video
