@@ -5,12 +5,15 @@ Pagine pubblicate con GitHub Pages: **https://istruzioni-montaggio.github.io/**
 | Prodotto | Pagina (indirizzo del QR code nel libretto) |
 |---|---|
 | Tavolo Levante (anche Libeccio, Maestrale, Panca Gradisca, Panca Volpina) | https://istruzioni-montaggio.github.io/levante/ |
+| Basamento Elegant in alluminio da 80/90 | https://istruzioni-montaggio.github.io/elegant/ |
 
 ## Struttura
 - `index.html` – elenco dei video
 - `levante/index.html` – pagina del video con l’elenco dei passi cliccabile
 - `levante/libretto-tavolo-levante.pdf` – il libretto di istruzioni (lo stesso stampato nella confezione)
-- `video/` – video 720p (riproduzione), 1080p (download) e immagine di anteprima
+- `elegant/index.html` e `elegant/libretto-basamento-elegant.pdf` – lo stesso per il Basamento Elegant
+- `video/` – per ogni prodotto video 720p (riproduzione), 1080p (download) e immagine di anteprima
+  (`tavolo-levante-…`, `basamento-elegant-…`)
 - `assets/` – stile, icona e font Barlow (licenza SIL OFL, vedi `assets/fonts/OFL-LICENSE.txt`)
 
 ## Aggiornare un video o un libretto senza cambiare il QR code
